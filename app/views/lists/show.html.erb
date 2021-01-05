@@ -1,9 +1,12 @@
-<p id="notice"><%= notice %></p>
+<div class="card-header d-flex justify-content-between">
+  <span><%= @list.title %></span>
+  <%= link_to 'Edit', edit_list_path(@list), class: 'btn btn-secondary btn-sm' %>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @list.title %>
-</p>
-
-<%= link_to 'Edit', edit_list_path(@list) %> |
-<%= link_to 'Back', lists_path %>
+<ul class="list-group">
+  <% @list.items.each do |item| %>
+    <li class="list-group-item">
+      <%= item.description %>
+    </li>
+  <% end %>
+</ul>
