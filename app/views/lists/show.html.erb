@@ -2,7 +2,7 @@
   <div>
     <h5 class="m-0"><b><%= @list.title %></b></h5>
     <p class="m-0">
-      <small>100% complete (X/X items)</small>
+      <small><%= @list.percent_complete %>% complete (<%= @list.completed_items %> / <%= @list.total_items %> items)</small>
     </p>
   </div>
   <div>
@@ -12,7 +12,8 @@
 
 <div class="card-body">
   <div class="progress mb-4">
-    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+    <div class="progress-bar" role="progressbar" style="width: <%= @list.percent_complete %>%" aria-valuenow="<%= @list.percent_complete %>" aria-valuemin="0" aria-valuemax="100">
+    </div>
   </div>
   <ul class="list-group">
     <% @list.items.each do |item| %>
