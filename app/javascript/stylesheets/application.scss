@@ -9,11 +9,22 @@ body {
 
 .list-group-item {
   background-color: #a21b0d;
+  opacity: 0.90;
   color: #000;
   border-color: #fff;
 }
 
 .btn {
+  background-color: #fff;
+  border-color: #000;
+}
+
+.card-header {
+  background-color: #fff;
+  opacity: 0.75;
+  color: #000;
+}
+
+.progress-bar {
   background-color: #a21b0d;
-  border-color: #fff;
 }

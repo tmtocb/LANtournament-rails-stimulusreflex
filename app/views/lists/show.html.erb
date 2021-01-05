@@ -1,12 +1,29 @@
 <div class="card-header d-flex justify-content-between">
-  <span><%= @list.title %></span>
-  <%= link_to 'Edit', edit_list_path(@list), class: 'btn btn-secondary btn-sm' %>
+  <div>
+    <h5 class="m-0"><b><%= @list.title %></b></h5>
+    <p class="m-0">
+      <small>100% complete (X/X items)</small>
+    </p>
+  </div>
+  <div>
+    <% link_to 'Edit', edit_list_path(@list), class: 'btn' %>
+ </div>
 </div>
 
-<ul class="list-group">
-  <% @list.items.each do |item| %>
-    <li class="list-group-item">
-      <%= item.description %>
-    </li>
-  <% end %>
-</ul>
+<div class="card-body">
+  <div class="progress mb-4">
+    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <ul class="list-group">
+    <% @list.items.each do |item| %>
+      <li class="list-group-item">
+        <div class="d-flex justify-content-between">
+          <span><%= item.description %></span>
+          <%= link_to '#', class: 'btn' do %>
+            <i class='fas fa-check'></i>
+          <% end %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
