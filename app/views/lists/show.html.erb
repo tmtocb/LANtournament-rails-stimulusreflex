@@ -17,14 +17,25 @@
   </div>
   <ul class="list-group">
     <% @list.items.each do |item| %>
-      <li class="list-group-item">
-        <div class="d-flex justify-content-between">
-          <span><%= item.description %></span>
-          <%= link_to '#', class: 'btn' do %>
-            <i class='fas fa-check'></i>
-          <% end %>
-        </div>
-      </li>
+      <% if item.completed? %>
+        <li class="list-group-item">
+          <div class="d-flex justify-content-between">
+            <span><%= item.description %></span>
+            <%= link_to '#', class: 'btn btn-yes' do %>
+              <i class='fas fa-check'></i>
+            <% end %>
+          </div>
+        </li>
+      <% else %>
+        <li class="list-group-item">
+          <div class="d-flex justify-content-between">
+            <span><%= item.description %></span>
+            <%= link_to '#', class: 'btn btn-no' do %>
+              <i class='fas fa-times'></i>
+            <% end %>
+          </div>
+        </li>  
+      <% end %>
     <% end %>
   </ul>
 </div>

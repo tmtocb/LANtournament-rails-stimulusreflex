@@ -14,9 +14,15 @@ body {
   border-color: #fff;
 }
 
-.btn {
+.btn-yes {
   background-color: #fff;
   border-color: #000;
+}
+
+.btn-no {
+  background-color: #000;
+  border-color: #fff;
+  color: #fff;
 }
 
 .card-header {
