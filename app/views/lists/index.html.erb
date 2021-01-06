@@ -1,20 +1,20 @@
 <div class="card-header d-flex justify-content-between">
-  <h5 class="m-0 text-dark">List</h5>
-  <%= link_to 'New List', new_list_path, class: 'btn btn-sm' %>
+  <h5 class="m-0">LAN Party Planner</h5>
+  <%= link_to 'New List', new_list_path, class: 'btn btn-no btn-sm' %>
 </div>
 
 <div class="card-body">
   <ul class="list-group">
     <% @lists.each do |list| %>
       <%= link_to list, class: 'text-decoration-none' do %>
-        <li class="card-header d-flex justify-content-between">
+        <li class="card-header d-flex justify-content-between mb-1">
           <div>
             <h6 class="m-0 text-dark">
               <b><%= list.title %></b>
               <span class="badge <%= list.badge_color %>"><%= list.status %></span>
             </h6>
             <p class="text-secondary m-0">
-               <small><%= list.percent_complete %>% complete (<%= list.completed_items %> / <%= list.total_items %> items)</small>
+               <small>status: <%= list.percent_complete %>% (<%= list.completed_items %> / <%= list.total_items %> tasks)</small>
             </p>
           </div>  
         </li>

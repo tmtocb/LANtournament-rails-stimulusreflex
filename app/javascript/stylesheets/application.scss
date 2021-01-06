@@ -1,17 +1,18 @@
 body {
-  background-color: #000;
-  color: #a21b0d;
+  background-color: #86868a;
 }
 
-.card {
-  background-color: #000;
+.card-body {
+  background-color: #f8ad01;
+  border-top-style: solid;
 }
 
 .list-group-item {
   background-color: #a21b0d;
   opacity: 0.90;
   color: #000;
-  border-color: #fff;
+  border-color: #000;
+  font-weight: bold;
 }
 
 .btn-yes {
@@ -20,24 +21,25 @@ body {
 }
 
 .btn-no {
-  background-color: #000;
-  border-color: #fff;
+  background-color: #1153ab;
+  border-color: #000;
   color: #fff;
 }
 
 .card-header {
   background-color: #fff;
-  opacity: 0.75;
+  border-top-color: #000;
+  border-right-color: #000;
+  border-bottom-color: #000;
+  border-left-color: #000;
+  border-style-bottom: solid;
   color: #000;
 }
 
 .progress-bar {
-  background-color: #a21b0d;
+  background-color: #a2292d;
 }
 
-.bg-no {
-  background-color: #fff;
-}
 
 .btn-add {
   background-color: #a21b0d;
@@ -45,8 +47,8 @@ body {
 }
 
 .badge-progress {
-  background-color: #0d94a2;
-  border-color: #fff;
+  background-color: #1153ab;
+  color: #fff;
 }
 
 .badge-yes {
@@ -58,4 +60,13 @@ body {
   background-color: #000;
   color: #fff;
   border-color: #fff;
+}
+
+.bg-no {
+  background-color: #fff;
+}
+
+.form-color {
+  background-color: #f8ad01;
+  text-align: center;
 }

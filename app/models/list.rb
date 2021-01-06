@@ -11,7 +11,7 @@ class List < ApplicationRecord
 
   def percent_complete
     return 0 if total_items == 0
-    (100 * completed_items.to_f / total_items).round(1)
+    (100 * completed_items.to_f / total_items).round(0)
   end
 
   def status
@@ -21,7 +21,7 @@ class List < ApplicationRecord
       when 100
         'completed'
       else 
-        'In progress'
+        'in progress...'
     end
   end
 
