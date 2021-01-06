@@ -1,15 +1,24 @@
-<div class="card-header d-flex justify-content-between">
-  <div>
-    <h5 class="m-0">
-      <b><%= @list.title %></b>
-      <span class="badge <%= @list.badge_color %>"><%= @list.status %></span>
-    </h5>
-    <p class="m-0">
-      <small><%= @list.percent_complete %>% complete (<%= @list.completed_items %> / <%= @list.total_items %> items)</small>
-    </p>
-  </div>
-  <div>
-    <% link_to 'Edit', edit_list_path(@list), class: 'btn' %>
+<div class="card-header">
+  <div class="row">
+    <div class="col-1">
+      <%= link_to lists_path, class: 'btn btn-no' do %>
+        <i class='fas fa-angle-left'></i>
+      <% end %>
+    </div>
+    <div class="col-11">
+      <div class="d-flex justify-content-between">
+        <div>
+          <h5 class="m-0">
+            <b><%= @list.title %></b>
+            <span class="badge <%= @list.badge_color %>"><%= @list.status %></span>
+          </h5>
+          <p class="text-secondary m-0"><small><%= @list.percent_complete %>% complete (<%= @list.completed_items %> / <%= @list.total_items %> items)</small></p>  
+        </div>
+        <div>
+          <%= link_to 'Edit', edit_list_path(@list), class: 'btn btn-no' %>
+        </div>
+      </div>
+    </div>
  </div>
 </div>
 
