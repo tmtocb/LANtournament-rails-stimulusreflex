@@ -1,6 +1,8 @@
 <div class="card-header d-flex justify-content-between">
   <h5 class="m-0">LAN Party Planner [10 guests]</h5>
-  <%= link_to 'New List', new_list_path, class: 'btn btn-no btn-sm' %>
+  <%= link_to new_list_path, class: 'btn btn-no btn-sm' do %>
+    <i class="fas fa-plus-square fa-2x"></i>
+  <% end %>
 </div>
 
 <div class="card-body">

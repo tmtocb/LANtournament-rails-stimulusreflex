@@ -15,7 +15,9 @@
           <p class="text-secondary m-0"><small><%= @list.percent_complete %>% complete (<%= @list.completed_items %> / <%= @list.total_items %> items)</small></p>  
         </div>
         <div>
-          <%= link_to 'Edit', edit_list_path(@list), class: 'btn btn-no' %>
+          <%= link_to edit_list_path(@list), class: 'btn btn-no' do %>
+            <i class="far fa-edit"></i>
+          <% end %>
         </div>
       </div>
     </div>
