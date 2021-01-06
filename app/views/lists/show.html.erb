@@ -1,6 +1,9 @@
 <div class="card-header d-flex justify-content-between">
   <div>
-    <h5 class="m-0"><b><%= @list.title %></b></h5>
+    <h5 class="m-0">
+      <b><%= @list.title %></b>
+      <span class="badge <%= @list.badge_color %>"><%= @list.status %></span>
+    </h5>
     <p class="m-0">
       <small><%= @list.percent_complete %>% complete (<%= @list.completed_items %> / <%= @list.total_items %> items)</small>
     </p>
