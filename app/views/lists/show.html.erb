@@ -30,7 +30,7 @@
 
   <%= form_for([@list, @item]) do |f| %>
     <div class="input-group mb-4">
-      <%= f.text_field :description, class: 'form-control', placeholder: 'Add an Item' %>
+      <%= f.text_field :description, class: 'form-control', placeholder: 'Add a Task' %>
       <div class="input-group-append">
         <%= f.submit "Add", class: "btn btn-add input-group-btn" %>
       </div>
