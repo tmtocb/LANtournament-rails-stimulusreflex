@@ -8,9 +8,9 @@ body {
 }
 
 .list-group-item {
-  background-color: #a21b0d;
+  background-color: #1153ab;
   opacity: 0.90;
-  color: #000;
+  color: #fff;
   border-color: #000;
   font-weight: bold;
 }
@@ -32,23 +32,25 @@ body {
 }
 
 .progress-bar {
-  background-color: #a2292d;
+  background-color: #1153ab;
 }
 
 
 .btn-add {
-  background-color: #a21b0d;
+  background-color: #1153ab;
   border-color: #000;
+  color: #fff;
+  font-weight: bold;
 }
 
 .badge-progress {
-  background-color: #1153ab;
+  background-color: #f8ad01;
   color: #fff;
 }
 
 .badge-yes {
-  background-color: #a21b0d;
-  border-color: #fff;
+  background-color: #1153ab;
+  color: #fff;
 }
 
 .badge-no {
